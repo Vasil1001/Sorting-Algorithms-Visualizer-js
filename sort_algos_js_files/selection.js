@@ -1,4 +1,16 @@
 async function selectionSort() {
+
+    // Algo name
+    document.getElementById("algorithm_running").innerText = "Selection Sort";
+
+    //Setting Time complexities
+    document.getElementById("worst_time").innerText = "O(N^2)";
+    document.getElementById("average_time").innerText = "Θ(N^2)";
+    document.getElementById("best_time").innerText = "Ω(N^2)";
+
+    //Setting Space complexity
+    document.getElementById("space_complexity").innerText = "O(1)";
+
     console.log('bubble sort clicked');
     // get the bars from index
     const barsArray = document.querySelectorAll(".bar");

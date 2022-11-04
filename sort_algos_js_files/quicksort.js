@@ -1,39 +1,3 @@
-async function quickSort() {
-    console.log('quicksort clicked');
-    // get the bars from index
-    const barsArray = document.querySelectorAll(".bar");
-    barsArray[0].style.background = 'green';
-
-    let pivot = barsArray
-    for (let i = 1; i < barsArray.length; i++) {
-        console.log("In first i loop");
-
-        let key = barsArray[i].style.height;
-        let j = i - 1;
-
-        barsArray[i].style.background = 'blue';
-
-        await new Promise(r => setTimeout(r, 50));
-
-        while (j >= 0 && (parseInt(barsArray[j].style.height) > parseInt(key))) {
-            console.log("In j loop");
-            barsArray[j].style.background = 'blue';
-            barsArray[j + 1].style.height = barsArray[j].style.height;
-            j--;
-
-            await new Promise(r => setTimeout(r, 50));
-
-            // color sorted side
-            for (let k = i; k >= 0; k--) {
-                barsArray[k].style.background = 'yellow';
-            }
-        }
-        barsArray[j + 1].style.height = key;
-        barsArray[i].style.background = 'yellow';
-
-    }
-}
-
 async function partition(barsArray, low, high) {
     let i = (low - 1);
 
@@ -73,6 +37,18 @@ async function partition(barsArray, low, high) {
 }
 
 async function quickSort(barsArray, low, high) {
+    // Algo name
+    document.getElementById("algorithm_running").innerText = "Quick Sort";
+
+    //Setting Time complexities
+    document.getElementById("worst_time").innerText = "O(N^2)";
+    document.getElementById("average_time").innerText = "Θ(N log N)";
+    document.getElementById("best_time").innerText = "Ω(N log N)";
+
+    //Setting Space complexity
+    document.getElementById("space_complexity").innerText = "O(log N)";
+
+
     if (low < high) {
         let pivot_index = await partition(barsArray, low, high);
         await quickSort(barsArray, low, pivot_index - 1);

@@ -1,15 +1,28 @@
 async function insertionSort() {
+
+    // Algo name
+    document.getElementById("algorithm_running").innerText = "Insertion Sort";
+
+    //Setting Time complexities
+    document.getElementById("worst_time").innerText = "O(N^2)";
+    document.getElementById("average_time").innerText = "Θ(N^2)";
+    document.getElementById("best_time").innerText = "Ω(N)";
+
+    //Setting Space complexity
+    document.getElementById("space_complexity").innerText = "O(1)";
+
     console.log('insertion sort clicked');
+
     // get the bars from index
     const barsArray = document.querySelectorAll(".bar");
     barsArray[0].style.background = 'green';
 
     for (let i = 1; i < barsArray.length; i++) {
         console.log("In first i loop");
-        
+
         let key = barsArray[i].style.height;
-        let j = i -1;
-        
+        let j = i - 1;
+
         barsArray[i].style.background = 'blue';
 
         await new Promise(r => setTimeout(r, 50));
@@ -23,7 +36,7 @@ async function insertionSort() {
             await new Promise(r => setTimeout(r, 50));
 
             // color sorted side
-            for(let k = i; k >= 0; k--){
+            for (let k = i; k >= 0; k--) {
                 barsArray[k].style.background = 'yellow';
             }
         }
