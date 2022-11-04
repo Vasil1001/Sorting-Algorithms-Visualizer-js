@@ -8,14 +8,6 @@ Link to all algorithms used in app: https://www.geeksforgeeks.org/sorting-algori
 
 <!-- TABLE OF CONTENTS -->
 <details>
-  <summary>Technologies used</summary>
-  <ol>
-    <li>JavaScript</li>
-  </ol>
-</details>
-
-<!-- TABLE OF CONTENTS -->
-<details>
   <summary>Table of Contents</summary>
   <ol>
     <li><a href="#general-info">General Info</a></li>
@@ -23,9 +15,15 @@ Link to all algorithms used in app: https://www.geeksforgeeks.org/sorting-algori
     <li><a href="#project-status">Status</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#app-screenshots">App Screenshots</a></li>
-
   </ol>
 </details>
+
+<!-- app-screenshots -->
+## App screenshots
+![chrome_WFOHWGtlAC](https://user-images.githubusercontent.com/78150846/199867688-b1bf63df-4a80-43e1-bcb5-97601e9da2f1.png)
+![chrome_wZ4eMy1bQU](https://user-images.githubusercontent.com/78150846/199867692-f0555954-ae9c-4f24-adc6-b5db1328582f.png)
+![chrome_vF9SGlLLxD](https://user-images.githubusercontent.com/78150846/199867683-4c96c6b0-cbc6-420c-b11d-655c31f553e6.png)
+![chrome_LC4Xsr1Xfa](https://user-images.githubusercontent.com/78150846/199867667-8ba4af0f-5780-48a4-b4be-f9f1a08cb6db.png)
 
 <!-- general-info -->
 ## General Info
@@ -50,24 +48,7 @@ Guide used as template: https://www.crio.do/projects/javascript-sorting-visualis
 
 <p align="right">
 
-<!-- app-screenshots -->
-## App screenshots
 
-Dashboard Page | Create Project 
-:-----------------------:|:-----------------------:
-![chrome_SLlqesFjco](https://user-images.githubusercontent.com/78150846/198050813-51f71c20-c138-4c4c-a909-041e5912a2c7.png)|![chrome_fEZSV3SZxG](https://user-images.githubusercontent.com/78150846/198050903-f4757a96-6ddf-4a2f-875f-9a5e4a7cb69b.png)
-
-Selected Project Page 
-:-----------------------:
-![chrome_VoHbTYRj6a](https://user-images.githubusercontent.com/78150846/198051412-d8413350-572f-48ef-9631-26b2d6b1b624.png)
-
-Edit Ticket  Page 
-:-----------------------:
-![chrome_zXpJzzj2N8](https://user-images.githubusercontent.com/78150846/198051706-72730f22-1379-4d7e-b66e-a723ed332f6d.png)
-
-Tickets Page 
-:-----------------------:
-![image](https://user-images.githubusercontent.com/78150846/198051898-080825fc-d9ec-471a-89aa-62d0ce39d0a6.png)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!--  [![Next][Next.js]][Next-url] [![React][React.js]][React-url] [![Vue][Vue.js]][Vue-url] [![Bootstrap][Bootstrap.com]][Bootstrap-url] [![JQuery][JQuery.com]][JQuery-url] -->
