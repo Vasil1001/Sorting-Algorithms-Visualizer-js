@@ -1,11 +1,11 @@
 # Sorting-Algorithms-Visualizer-js <a name="readme-top"></a> 
-A Sorting Algorithms Visualizer coded in JavaScript for practice
+A Sorting Algorithms Visualizer coded in JavaScript for practice.
 
-A pesronal practice project to learn more about JavaScript and sorting algorithms.
-Link to all algorithms used in app: https://www.geeksforgeeks.org/sorting-algorithms/?ref=lbp
-
-Link to check out the website: https://algo-visualizer-js.netlify.app
+Check out the website at: https://algo-visualizer-js.netlify.app
 Deployed on Netlify
+
+A pesronal project created to learn more about JavaScript and sorting algorithms.
+Link to all algorithms used in app: https://www.geeksforgeeks.org/sorting-algorithms/?ref=lbp
 
 [![js][js.com]][js-url]
 
