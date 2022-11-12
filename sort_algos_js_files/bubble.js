@@ -25,7 +25,8 @@ async function bubbleSort() {
 
             if (parseInt(barsArray[j].style.height) > parseInt(barsArray[j + 1].style.height)) {
                 console.log("If barsArray 1 > barsArray 2 swap them");
-                await new Promise(r => setTimeout(r, 50));
+                await sleep(timeSleep); //call function to work with slider
+                // await new Promise(r => setTimeout(r, 50));
                 swap(barsArray[j], barsArray[j + 1]);
             }
             barsArray[j].style.background = 'cyan';

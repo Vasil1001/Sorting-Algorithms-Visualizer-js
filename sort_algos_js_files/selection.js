@@ -28,7 +28,7 @@ async function selectionSort() {
             // Change color for the current comparision (in consideration for min_index)
             barsArray[j].style.background = 'red';
 
-            await new Promise(r => setTimeout(r, 50));
+            await sleep(timeSleep);
             if (parseInt(barsArray[j].style.height) < parseInt(barsArray[min_idx].style.height)) {
                 console.log("If barsArray 1 < current smallest barsArray change current smalest");
                 if (min_idx !== i) {
@@ -41,7 +41,7 @@ async function selectionSort() {
                 barsArray[j].style.background = 'cyan';
             }
         }
-        await new Promise(r => setTimeout(r, 50));
+        await sleep(timeSleep);
         swap(barsArray[min_idx], barsArray[i]);
 
         // color mid index blue after reset as it has been swapped

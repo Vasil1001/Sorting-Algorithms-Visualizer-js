@@ -1,0 +1,45 @@
+body { 
+    background-color: rgb(32, 72, 95); 
+    color:white;
+    font-size: 18px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.flex-container{
+    margin-top: 1px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    transition: 1.5s all ease;
+    width: 100%;
+    height: 500px;
+    
+}
+
+/* STYLING FOR THE BARS */
+.flex-item{
+    background: rgb(0, 255, 251);
+    border: 1pt solid black;
+    width: 12px;
+    transition: 0.1s all ease;
+}
+
+#leftbox {
+    float:left; 
+    background:white;
+    border: 1pt solid black;
+    rounded
+    width:20%;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+#middlebox{
+    float:left; 
+    width:75%;
+    height:280px;
+}
+#rightbox{
+    float:right;
+    width:00%;
+    height:280px;
+}

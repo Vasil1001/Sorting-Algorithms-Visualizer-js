@@ -25,7 +25,7 @@ async function insertionSort() {
 
         barsArray[i].style.background = 'blue';
 
-        await new Promise(r => setTimeout(r, 50));
+        await sleep(timeSleep);
 
         while (j >= 0 && (parseInt(barsArray[j].style.height) > parseInt(key))) {
             console.log("In j loop");
@@ -33,7 +33,7 @@ async function insertionSort() {
             barsArray[j + 1].style.height = barsArray[j].style.height;
             j--;
 
-            await new Promise(r => setTimeout(r, 50));
+            await sleep(timeSleep);
 
             // color sorted side
             for (let k = i; k >= 0; k--) {

@@ -6,27 +6,28 @@ async function partition(barsArray, low, high) {
     for (let j = low; j <= high - 1; j++) {
         barsArray[j].style.background = 'yellow';
 
-        await new Promise(r => setTimeout(r, 50));
+        await sleep(timeSleep);
 
         if (parseInt(barsArray[j].style.height) < parseInt(barsArray[high].style.height)) {
             i++;
             swap(barsArray[i], barsArray[j]);
 
             barsArray[i].style.background = 'orange';
-            await new Promise(r => setTimeout(r, 50));
+            await sleep(timeSleep);
         } else {
             // color if not less than pivot
             barsArray[j].style.background = 'blue';
         }
     }
     i++;
-    await new Promise(r => setTimeout(r, 50));
+    await sleep(timeSleep);
     swap(barsArray[i], barsArray[high])
 
     barsArray[high].style.background = 'blue';
     barsArray[low].style.background = 'green';
 
-    await new Promise(r => setTimeout(r, 50));
+    await sleep(timeSleep);
+    // await new Promise(r => setTimeout(r, 50));
 
     // color
     for (let k = 0; k < barsArray.length; k++) {

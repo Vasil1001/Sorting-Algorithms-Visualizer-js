@@ -1,27 +1,49 @@
 let random_array_100 = [];
+
+// Create a bar array according to the slider value
+var arr_size = document.querySelector("#arr_sz"); //select bars slider
+
+arr_size.addEventListener("input",function(){
+    createBarArray(parseInt(arr_size.value));
+});
+
+// Change speed of bars
+function sleep(time) {
+    return new Promise(r => { 
+        setTimeout(() => { r('') }, time); 
+    })
+}
+let timeSleep = 260; //default sleep time is 200
+
+// Get speed slider
+let speedSlider = document.querySelector("#speed_slider");
+
+speedSlider.addEventListener('input', function(){
+    timeSleep = 310 - parseInt(speedSlider.value);
+});
+
 createBarArray();
 
-function createBarArray() {
+function createBarArray(no_of_bars = 60) {
     // replace array 
-    deletePreviousArray()
+    deletePreviousArray();
 
     // Array to store randomly generated numbers
     random_array_100 = [];
-    var numberOfBars = 0;
-    let l = 35;
-
+    
     // get a random number and add it to the array until there are 100 in array
-    for (numberOfBars = 0; numberOfBars < l; numberOfBars++) {
-        random_array_100.push(Math.round(Math.random() * l * 3.5));
+    for (let singleBar = 0; singleBar < no_of_bars; singleBar++) {
+        random_array_100.push(Math.floor(Math.random() * 250) + 1);
     }
+
     // print 100 random numbers of the array
     console.log(random_array_100);
 
-
     // select the div #bars element
     const bars = document.querySelector("#bars");
+
     // make bars with height from random array numbers
-    for (let i = 0; i < random_array_100.length; i++) {
+    for (let i = 0; i < no_of_bars; i++) {
         // create div bar for each number in the array
         const bar = document.createElement("div");
         bar.style.height = `${random_array_100[i] * 2}px`;
@@ -37,8 +59,29 @@ function deletePreviousArray() {
     bar.innerHTML = '';
 }
 
+function stopSortingAndReset() {
+    const bar = document.querySelector("#bars");
+    bar.innerHTML = '';
+
+    document.getElementById("new_array").disabled = false;
+
+    document.getElementById("arr_sz").disabled = false;
+
+    document.getElementById("bubble_sort").disabled = false;
+    document.getElementById("selection_sort").disabled = false;
+    document.getElementById("insertion_sort").disabled = false;
+    document.getElementById("quick_sort").disabled = false;
+    
+    createBarArray(arr_sz.value);
+}
+
+document.getElementById("reset").addEventListener('click',function() {
+    stopSortingAndReset()
+});
+
+// TAP Randomize Bars button to create a new array of bars
 document.getElementById("new_array").addEventListener("click", function () {
-    createBarArray();
+    createBarArray(arr_sz.value);
 });
 
 function swap(element1, element2) {
@@ -52,6 +95,8 @@ function swap(element1, element2) {
 function disableButtonsOnSortRun() {
     document.getElementById("new_array").disabled = true;
 
+    document.getElementById("arr_sz").disabled = true;
+
     document.getElementById("bubble_sort").disabled = true;
     document.getElementById("selection_sort").disabled = true;
     document.getElementById("insertion_sort").disabled = true;
@@ -60,6 +105,8 @@ function disableButtonsOnSortRun() {
 
 function enableButtonsAfterSortRun() {
     document.getElementById("new_array").disabled = false;
+
+    document.getElementById("arr_sz").disabled = false;
 
     document.getElementById("bubble_sort").disabled = false;
     document.getElementById("selection_sort").disabled = false;
